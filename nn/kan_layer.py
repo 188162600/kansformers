@@ -72,7 +72,7 @@ class RBF(nn.Module):
         target.beta=self.beta
         
 class KANLayer(nn.Module):
-    def __init__(self, in_features,out_features,num_basis=8,base_fn=...,basis_trainable=False,ranges=None,dtype=None,device=None):
+    def __init__(self, in_features,out_features,bias=True,num_basis=8,base_fn=...,basis_trainable=False,ranges=None,dtype=None,device=None):
         super(KANLayer, self).__init__()
         
         factory_kwargs = {'device': device, 'dtype': dtype}
